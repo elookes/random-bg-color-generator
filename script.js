@@ -15,10 +15,9 @@
     function setValue(v) {
         if (typeof(Storage) !== "undefined") {
             listOfUsedValues.push(v);
-            console.log(listOfUsedValues);
             localStorage.setItem("used", JSON.stringify(listOfUsedValues));
         } else {
-            used.push(v);
+            listOfUsedValues.push(v);
         }
     }
 
